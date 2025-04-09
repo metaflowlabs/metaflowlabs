@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// Layout-specific script logic (if any) can go here
 </script>
 
 <template>
@@ -25,12 +24,10 @@
 
     <!-- Main Content Slot -->
     <main class="mx-auto px-4 py-8 container">
-      <!-- Added padding -->
       <slot />
     </main>
 
     <footer class="mt-8 border-t border-gray-200 bg-white py-6 dark:border-gray-700 dark:bg-gray-800">
-      <!-- Added margin-top -->
       <div class="mx-auto px-4 text-center text-gray-600 container dark:text-gray-400">
         &copy; {{ new Date().getFullYear() }} MetaflowLabs. All rights reserved.
       </div>
@@ -39,5 +36,4 @@
 </template>
 
 <style scoped>
-/* Layout-specific scoped styles (if any) can go here */
 </style>

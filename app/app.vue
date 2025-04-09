@@ -1,7 +1,9 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import '~/assets/css/twoslash.css'
 </script>
 
 <template>
-  <NuxtPage />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
