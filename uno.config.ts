@@ -1,14 +1,16 @@
+// Import the transformer
+import transformerVariantGroup from '@unocss/transformer-variant-group'
 import { defineConfig, presetIcons, presetTypography, presetWind3 } from 'unocss'
 
 export default defineConfig({
   presets: [
-    presetWind3(),
+    presetWind3(), // Replaced presetUno with presetWind3
     presetTypography(),
     presetIcons({
       scale: 1.2,
       collections: {
-        heroicons: () => import('@iconify-json/heroicons').then(i => i.icons),
-      },
+        heroicons: () => import('@iconify-json/heroicons').then(i => i.icons)
+      }
     }),
   ],
   shortcuts: {
@@ -39,5 +41,22 @@ export default defineConfig({
 
     // Code block styling
     'code-block': 'rounded-lg overflow-hidden my-4',
+
+    // --- New Shortcuts from Task 3-6 ---
+    // Consistent link styling (e.g., in default layout nav)
+    'nav-link': 'hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-150',
+    // Common section heading style (e.g., in index page)
+    'section-heading': 'mb-6 text-3xl text-gray-800 font-bold dark:text-white',
+    // Feature item box from index.vue
+    'feature-item': 'border border-gray-200 rounded-lg p-6 dark:border-gray-700',
+    // Feature icon wrapper from index.vue
+    'feature-icon-wrapper': 'mb-4 h-10 w-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/50',
+    // Base feature icon color/style from index.vue
+    'feature-icon': 'text-indigo-600 dark:text-indigo-400',
   },
+  // Enable transformerVariantGroup
+  transformers: [
+    transformerVariantGroup(),
+  ]
+  // No theme defined currently
 })

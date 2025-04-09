@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// Define page meta to use the default layout
 definePageMeta({
   layout: 'default',
 })
@@ -7,7 +6,6 @@ definePageMeta({
 
 <template>
   <div>
-    <!-- Root element for the page -->
     <!-- Header Section -->
     <header class="from-indigo-600 to-purple-600 bg-gradient-to-r py-16">
       <div class="mx-auto px-4 container">
@@ -33,7 +31,6 @@ definePageMeta({
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
           <!-- Software RFC Card (Example) -->
           <div class="template-card">
-            <!-- Using shortcut from uno.config.ts -->
             <div class="card-header border-blue-100 bg-blue-50 dark:border-blue-800 dark:bg-blue-900/30">
               <h3 class="text-xl text-blue-900 font-bold dark:text-blue-200">
                 Software RFC
@@ -45,7 +42,7 @@ definePageMeta({
             <div class="card-body">
               <ul class="text-gray-700 space-y-2 dark:text-gray-300">
                 <li class="flex items-start">
-                  <span class="i-heroicons:check-circle-solid mr-2 mt-1 flex-shrink-0 text-green-500" /> <!-- Icon -->
+                  <span class="i-heroicons:check-circle-solid mr-2 mt-1 flex-shrink-0 text-green-500" />
                   <span>Structured format for technical proposals</span>
                 </li>
                 <li class="flex items-start">
@@ -107,7 +104,7 @@ definePageMeta({
           <!-- Feature Item (Example) -->
           <div class="border border-gray-200 rounded-lg p-6 dark:border-gray-700">
             <div class="mb-4 h-10 w-10 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/50">
-              <span class="i-heroicons:code-bracket text-indigo-600 dark:text-indigo-400" /> <!-- Icon -->
+              <span class="i-heroicons:code-bracket text-indigo-600 dark:text-indigo-400" />
             </div>
             <h3 class="mb-2 text-xl font-bold">
               Syntax Highlighting
@@ -145,5 +142,4 @@ definePageMeta({
 </template>
 
 <style scoped>
-/* Page-specific styles (if any) */
 </style>
