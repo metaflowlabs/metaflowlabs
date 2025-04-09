@@ -8,8 +8,10 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint ./app",
-    "lint:fix": "eslint ./app --fix"
+    "lint": "NODE_NO_WARNINGS=1 eslint ./app",
+    "lint:fix": "NODE_NO_WARNINGS=1 eslint ./app --fix",
+    "lint:style": "stylelint **/*.{vue,css} --fix --ignore-path .gitignore",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@nuxt/content": "^3.4.0",
@@ -18,6 +20,9 @@
     "@nuxt/icon": "^1.11.0",
     "@nuxt/image": "^1.10.0",
     "@nuxt/test-utils": "^3.17.2",
+    "@vueuse/core": "^13.1.0",
+    "@vueuse/nuxt": "^13.1.0",
+    "@vueuse/shared": "^13.1.0",
     "nuxt": "^3.16.2",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
@@ -29,11 +34,13 @@
     "@iconify-json/logos": "^1.2.4",
     "@unocss/eslint-config": "66.1.0-beta.10",
     "@unocss/nuxt": "66.1.0-beta.10",
-    "@vueuse/core": "^13.1.0",
-    "@vueuse/nuxt": "^13.1.0",
+    "@unocss/transformer-variant-group": "66.1.0-beta.10",
     "eslint": "^9.24.0",
     "eslint-plugin-format": "^1.0.1",
     "nuxt-content-twoslash": "^0.1.2",
+    "stylelint": "^16.18.0",
+    "stylelint-config-recommended-vue": "^1.6.0",
+    "stylelint-config-standard": "^38.0.0",
     "typescript": "^5.8.3",
     "unocss": "66.1.0-beta.10",
     "vue-tsc": "^2.2.8"
